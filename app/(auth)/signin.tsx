@@ -11,7 +11,8 @@ import { signinWithGoogle } from '@/service/api/authServices'
 
 const signin = () => {
   const handleSignin = async()=>{
-    await signinWithGoogle();
+    await signinWithGoogle()
+    
   }
   return (
     <CustomSafeAreaView style={siginStyles.container}>

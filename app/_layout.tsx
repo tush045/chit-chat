@@ -6,17 +6,17 @@ import { Stack } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
 
 
-SplashScreen.preventAutoHideAsync()
+// SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
-    const {loaded} = useFonts({
-        SpaceMemo: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    })
-    useEffect(() => {
-        if (loaded) {
-            SplashScreen.hideAsync();
-        }
-    }, [loaded])
+    // const {loaded} = useFonts({
+    //     SpaceMemo: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    // })
+    // useEffect(() => {
+    //     if (loaded) {
+    //         SplashScreen.hideAsync();
+    //     }
+    // }, [loaded])
     // if (!loaded) {
     //     return null
     // }

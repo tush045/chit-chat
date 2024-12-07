@@ -8,7 +8,7 @@ const index = () => {
   useEffect(() => {
     setTimeout(() => {
       resetAndNavigate('/(auth)/signin');
-    }, 300);
+    }, 100);
 
   }, [])
 

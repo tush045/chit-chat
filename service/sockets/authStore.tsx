@@ -9,7 +9,7 @@ interface authStore {
     setUser: (user: any) => void;
     logout: () => void;
     deviceTokenAdded: boolean;
-    setDeviceStatus: (value: boolean) => void;
+    setDeviceTokenStatus: (value: boolean) => void;
 }
 
 export const useAuthStore = create<authStore>()(
@@ -17,13 +17,13 @@ export const useAuthStore = create<authStore>()(
         (set, get) => ({
             user: null,
             deviceTokenAdded: false,
-            setUser: (data) => set({ user: data }),
-            logout: () => set({ user: null, deviceTokenAdded: false }),
+            setUser: (data) => set({user:data}),
+            logout: () => set({user:null,deviceTokenAdded:false}),
             setDeviceTokenStatus: (value) => ({ deviTokenAdded: value }),
         }),
         {
             name: 'auth-storage',
             storage: createJSONStorage(() => mmkvStorage),
-        }
-    )
+        },
+    ),
 );

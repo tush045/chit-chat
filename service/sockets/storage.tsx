@@ -9,15 +9,15 @@ export const storage = new MMKV({
     id:'my-app-storage',
     encryptionKey:'some-secret-key',
 });
-export const mmkvStorage = new MMKV({
-    setItem:(key,value)=>{
+export const mmkvStorage = {
+    setItem:(key:string,value:string)=>{
         storage.set(key,value);
     },
-    getItem:(key)=>{
+    getItem:(key:string)=>{
         const value = storage.getString(key);
         return value ?? null;
     },
-    removeItem:(key)=>{
+    removeItem:(key:string)=>{
         storage.delete(key);
     },
-})
+};
